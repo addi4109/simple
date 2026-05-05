@@ -6,6 +6,7 @@
 *{
 margin: 0;
 padding: 0;
+box-sizing: border-box;
 }
 .wrapper {
 min-height: 100vh;
@@ -15,7 +16,7 @@ align-items: center;
 }
 .container
 {
-width: 100%;
+max-width: 1200px;
 display: flex;
 justify-content: center;
 align-items: stretch;
@@ -73,6 +74,7 @@ cursor: pointer
 {
 flex-direction: column;
 min-height: auto;
+gap: 20px;
 }
 .left-card,.right-card
 {
