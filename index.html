@@ -1,106 +1,192 @@
 <!doctype html>
 <html>
 <head>
-<title>Page Divide Left Part and Right Part</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
 <style>
+/* removing default margin and padding*/
 *{
 margin: 0;
 padding: 0;
 box-sizing: border-box;
 }
-.wrapper {
-min-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: center;
-}
 .container
 {
-max-width: 1200px;
+width: 100%;
+}
+.cardcon
+{
 display: flex;
 justify-content: center;
-align-items: stretch;
-gap: 30px;
+align-items:center;
+gap: 25px;
+flex-wrap: wrap;
 padding: 20px;
+margin-top: 20px;
 }
-.left-card
+body
 {
-width: 40%;
-border-radius: 10px;
-background-color: #DCDCDC;
+padding-top: 70px;
+padding-bottom: 70px;
+}
+.nav
+{
+background-color: black;
+color: white;
+width: 100%;
 display: flex;
-flex-direction: column;
+align-items: center;
+justify-content: space-between;
+padding: 10px 20px;
+position: fixed;
+top: 0;
+flex-wrap: wrap;
+z-index: 1000;
+}
+.nav span
+{
+padding: 10px;
+}
+.menu span
+{
+margin: 15px;
+}
+.nav span:hover
+{
+background-color: white;
+color: black;
+border-radius: 5px;
+cursor: pointer;
+}
+.logo
+{
+margin-left: 5px;
+}
+.footer
+{
+background-color: black;
+height: 50px;
+width: 100%;
+display: flex;
+justify-content: center;
+text-align: center;
+align-items: center;
+position: fixed;
+bottom: 0;
+}
+.footer span
+{
+color: white;
+}
+.card
+{
+background-color: #000040;
+min-height: 400px;
+width: 300px;
+display: flex;
 justify-content: center;
 align-items: center;
 text-align: center;
-transition: 0.3s;
-padding: 25px;
-}
-.right-card
-{
-width: 40%;
+flex-direction: column;
 border-radius: 10px;
-background-color: #000080;
+color: white;
+padding: 20px;
+transition: 0.3s;
+}
+.imgcircle
+{
+border-radius:50%;
+background-size: cover;
+height: 100px;
+width: 100px;
+background-color: grey;
 display: flex;
 justify-content: center;
 align-items: center;
-transition: 0.3s;
-padding: 25px;
+border: 2px solid gold;
 }
-.left-card p
+.imgcircle img
 {
-margin: 20px;
+height: 100px;
+width: 100px;
+border-radius: 50%;
+object-fit: cover;
 }
-.left-card:hover
-{
-transform: scale(1.05);
-color: white;
-background-color: #800080;
-cursor: pointer
-}
-.right-card:hover
+.card:hover
 {
 transform: scale(1.03);
-background-color: #800080;
-cursor: pointer
+cursor: pointer;
 }
-.right-card img {
-  width: 80%;
-  height: auto;
-}
-@media(max-width: 768px)
+.card p
 {
-.wrapper 
-{
-min-height: auto;          
-align-items: flex-start;   
-padding-top: 30px;        
+line-height: 20px;
+margin-top: 10px;
 }
-.container
+.card h2
+{
+margin-top: 10px;
+}
+.title
+{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+@media(max-width:768px)
+{
+
+body
+{
+padding-top:120px;
+}
+
+.nav
 {
 flex-direction: column;
+gap: 10px;
 }
-.left-card,.right-card
+
+.menu
 {
-width:100%;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
 }
-.right-card img
+
+.card
 {
-max-width: 100%;
-height: auto;
+width: 100%;
+max-width: 350px;
 }
+
+.title h1
+{
+font-size: 30px;
+}
+
 }
 </style>
 </head>
 <body>
-<div class="wrapper">
 <div class="container">
-<div class="left-card">
-<h2>About Us</h2>
-<p>We are passionate developers focused on building modern, responsive, and user-friendly websites. Our goal is to create clean designs and efficient solutions that deliver a great user experience.</p>
+<div class="nav">
+<div class="logo"><h3>My Site</h3></div>
+<div class="menu">
+<span>Home</span>
+<span>About</span>
+<span>Contact</span>
 </div>
-<div class="right-card"><img src="https://png.pngtree.com/png-vector/20220705/ourmid/pngtree-red-welcome-in-banner-style-png-image_5687333.png"></div>
 </div>
 </div>
+<div class="title"><h1>Birds</h1></div>
+<div class="cardcon">
+<div class="card"><div class="imgcircle"><img src="https://cdn.britannica.com/35/3635-050-96241EC1/Scarlet-macaw-ara-macao.jpg"></img></div><h2>Parrot</h2><p>The parrot is a colorful bird known for its curved beak and ability to mimic human speech. It is usually green, but can also have red, blue, or yellow feathers. Parrots are intelligent and social birds that live in forests and often eat fruits, seeds, and nuts.</p></div>
+<div class="card"><div class="imgcircle"><img src="https://www.britannica.com/cdn/23/256823-101-11E00D74/images/image-1.jpg"></img></div><h2>Peacock</h2><p>The peacock is a large, colorful bird known for its beautiful feather display. The male has long, bright tail feathers with eye-like patterns that it spreads into a fan during courtship. It is mainly found in forests and near villages in India and is known for its loud calls and graceful walk.</p></div>
+<div class="card"><div class="imgcircle"><img src="https://birdaware.org/solent/wp-content/uploads/sites/2/2021/08/Kingfisher-other-birds.png"></img></div><h2>KingFisher</h2><p>The kingfisher is a small, colorful bird found near rivers and lakes. It has a long, sharp beak and catches fish by diving into water. It is known for its quick movement and excellent eyesight, often perching quietly above water kingfisher.</p></div>
+</div>
+</div>
+<footer class="footer">
+<span>© 2026 Aditya Dnyaneshwar Sawant | All Rights Reserved</span>
+</footer>
 </body>
 </html>
